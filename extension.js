@@ -37,6 +37,7 @@ const commit = async () => {
 
   const options = Object.entries(types).map(commitTypeToVsOption);
   options[0].picked = true;
+
   const { commitType } = await vscode.window.showQuickPick(options);
 
   const affected = await vscode.window.showInputBox({
