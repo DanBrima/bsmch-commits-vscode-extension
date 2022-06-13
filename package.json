@@ -1,29 +1,51 @@
 {
   "name": "danbrima-bsmch-commits",
 	"displayName": "bsmch-commits",
-	"description": "An extension for commiting accourding to the standarts",
+	"description": "An extension for committing accourding to the standarts",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.54.0"
 	},
 	"categories": [
-		"Other"
+		"Formatters",
+		"Snippets"
 	],
+	"repository": {
+    "type": "git",
+    "url": "https://github.com/DanBrima/bsmch-commits-vscode-extension.git"
+  },
+	"extensionDependencies": [
+    "vscode.git"
+  ],
+  "license": "MIT",
 	"activationEvents": [
-		"onCommand:danbrima-bsmch-commits.add-commit"
+		"onCommand:danbrima-bsmch-commits.add-commit",
+		"onCommand:danbrima-bsmch-commits.add-commit-push"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [{
 			"command": "danbrima-bsmch-commits.add-commit",
-			"title": "CZ bsmch: Add and Commit"
+			"title": "Cz bsmch: Add and Commit"
+		},
+		{
+			"command": "danbrima-bsmch-commits.add-commit-push",
+			"title": "Cz bsmch: Add, Commit and Push"
 		}]
 	},
 	"scripts": {
 		"lint": "eslint .",
 		"pretest": "yarn run lint",
 		"test": "node ./test/runTest.js"
-	},
+	}, "keywords": [
+    "git",
+    "commit",
+    "bsmch-commits",
+    "gacp",
+    "commitizen",
+    "cz",
+		"bsmch"
+  ],
 	"devDependencies": {
 			"@types/vscode": "^1.54.0",
 			"@types/glob": "^7.2.0",
@@ -33,6 +55,7 @@
 			"glob": "^8.0.1",
 			"mocha": "^9.2.2",
 			"typescript": "^4.6.4",
-			"@vscode/test-electron": "^2.1.3"
+			"@vscode/test-electron": "^2.1.3",
+			"conventional-commit-types": "^3.0.0"
 	}
 }
