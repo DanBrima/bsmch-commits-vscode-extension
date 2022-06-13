@@ -19,17 +19,17 @@
   ],
   "license": "MIT",
 	"activationEvents": [
-		"onCommand:danbrima-bsmch-commits.add-commit",
-		"onCommand:danbrima-bsmch-commits.add-commit-push"
+		"onCommand:bsmch-commits.add-commit",
+		"onCommand:bsmch-commits.add-commit-push"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [{
-			"command": "danbrima-bsmch-commits.add-commit",
+			"command": "bsmch-commits.add-commit",
 			"title": "Cz bsmch: Add and Commit"
 		},
 		{
-			"command": "danbrima-bsmch-commits.add-commit-push",
+			"command": "bsmch-commits.add-commit-push",
 			"title": "Cz bsmch: Add, Commit and Push"
 		}]
 	},
