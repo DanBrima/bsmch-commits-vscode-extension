@@ -158,6 +158,9 @@ const showInputBox = async (options) => {
 
   return throwIfEmptyElseReturn(option);
 };
+const makeCommit = () => {
+  
+}
 
 const commit = async (args) => {
   try {
@@ -194,9 +197,9 @@ const commit = async (args) => {
       affected,
       commitMessage
     );
+  
     await vscode.commands.executeCommand("git.commitAll", repository);
-
-    vscode.window.showInformationMessage("Hello World from bsmch-commits!");
+  
   } catch (error) {
     console.log(error);
   }

@@ -8,7 +8,8 @@
 	},
 	"categories": [
 		"Formatters",
-		"Snippets"
+		"Snippets",
+		"SCM Providers"
 	],
 	"repository": {
     "type": "git",
